@@ -1,0 +1,82 @@
+// @import '_variables.scss';
+
+@keyframes div-slide-left { 
+    0%{
+        left: 100px;
+        opacity: 0;
+    }
+    100%{
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes div-slide-up { 
+    0%{
+        top: 100px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-color-r-to-l { 
+    0%{
+        background-position: 0% 100%;
+    }
+    50%{
+        background-position: 50% 100%;
+    }
+    100%{
+        background-position: 100% 100%;
+    }
+}
+@keyframes slide-color-b-to-t { 
+    0%{
+        background-position: 100% 0%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 100% 100%;
+    }
+}
+@keyframes rubber {
+    0% {
+        transform-origin: 0px 0px;
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform-origin: calc(100% / 2.1) calc(100% / 2.1);
+        transform: scale(1.25, 0.75);
+    }
+
+    40% {
+        transform-origin: calc(100% / 2.1) calc(100% / 2.1);
+        transform: scale(0.75, 1.25);
+    }
+
+    50% {
+        transform-origin: calc(100% / 2.1) calc(100% / 2.1);
+        transform: scale(1.15, 0.85);
+    }
+
+    65% {
+        transform-origin: calc(100% / 2.1) calc(100% / 2.1);
+        transform: scale(.95, 1.05);
+    }
+
+    75% {
+        transform-origin: calc(100% / 2.1) calc(100% / 2.1);
+        transform: scale(1.05, .95);
+    }
+
+    100% {
+        transform-origin: 0px 0px;
+        transform: scale3d(1, 1);
+    }
+  }

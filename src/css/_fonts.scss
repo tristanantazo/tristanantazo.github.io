@@ -1,0 +1,44 @@
+// Font Families
+$font-regular: Titillium-Regular;
+
+$font-bold: Titillium-Bold;
+$font-bold-italic: Titillium-BoldItalic;
+$font-bold-upright: Titillium-BoldUpright;
+
+$font-light: Titillium-Light;
+$font-light-italic: Titillium-LightItalic;
+$font-light-upright: Titillium-LightUpright;
+
+$font-regular: Titillium-Regular;
+$font-regular-italic: Titillium-RegularItalic;
+$font-regular-upright: Titillium-RegularUpright;
+
+
+$font-families: (
+    "font-bold": $font-bold,
+    "font-bold-italic": $font-bold-italic,
+    "font-bold-upright": $font-bold-upright,
+    "font-light": $font-light,
+    "font-light-italic": $font-light-italic,
+    "font-light-upright": $font-light-upright,
+    "font-regular": $font-regular,
+    "font-regular-italic": $font-regular-italic,
+    "font-regular-upright": $font-regular-upright,
+);
+
+@mixin font($font) {
+    @font-face {
+        font-family: $font;
+        src: url("../../src/assets/fonts/"+$font+".otf") format("opentype");
+    }
+}
+
+@each $font-family-name, $font-family-value in $font-families {
+    // Include Fonts
+    @include font($font-family-value);
+
+    // Add text-[font family] style
+    .text-#{$font-family-name} {
+        font-family: $font-family-value !important;
+    }
+}

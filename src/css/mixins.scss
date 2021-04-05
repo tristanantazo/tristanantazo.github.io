@@ -1,0 +1,51 @@
+@mixin padding-horizontal($value) {
+    padding-left: $value;
+    padding-right: $value;
+}
+
+
+@mixin padding-vertical($value) {
+    padding-top: $value;
+    padding-bottom: $value;
+}
+
+@mixin padding($values...) {
+    @each $value in $values {
+        padding: #{$value}
+    }
+}
+
+
+@mixin margin-horizontal($value) {
+    margin-left: $value;
+    margin-right: $value;
+}
+
+@mixin margin-vertical($value) {
+    margin-top: $value;
+    margin-bottom: $value;
+}
+
+@mixin margin($values...) {
+    @each $value in $values {
+        margin: #{$value}
+    }
+}
+
+@mixin slide-color-b-to-t {
+    background: linear-gradient(to top ,var(--secondary) 50%, var(--tertiary) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position: 0% 0%;
+}
+
+@mixin slide-color-r-to-l {
+    background: linear-gradient(to left ,var(--secondary) 50%, var(--tertiary) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 0;
+}

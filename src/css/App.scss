@@ -1,0 +1,21 @@
+@import '_variables.scss';
+@import '_fonts.scss';
+@import 'animation.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: $font-regular;
+}
+
+.App {
+    // display: grid;
+    // grid-template-columns: 9em auto;
+    &:after{
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
