@@ -36,7 +36,6 @@ $font-families: (
 @each $font-family-name, $font-family-value in $font-families {
     // Include Fonts
     @include font($font-family-value);
-
     // Add text-[font family] style
     .text-#{$font-family-name} {
         font-family: $font-family-value !important;

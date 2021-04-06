@@ -11,8 +11,6 @@ body{
 }
 
 .App {
-    // display: grid;
-    // grid-template-columns: 9em auto;
     &:after{
         clear: both;
         content: "";

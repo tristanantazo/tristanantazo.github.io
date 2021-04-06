@@ -2,6 +2,8 @@ import React from 'react';
 
 import {MenuItems} from './MenuItems';
 
+import './Menu.scss';
+
 class Menu extends React.Component{
     slideTo = (param) => {
         console.log(param)

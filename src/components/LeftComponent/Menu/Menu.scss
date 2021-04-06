@@ -1,0 +1,22 @@
+@import '../../../css/variables';
+@import '../../../css/animation.scss';
+
+@import '../../../css/mixins.scss';
+
+nav{
+    li {
+        text-align: right;
+        border-top: 1px solid #7c7c7c52;
+        letter-spacing: 1px;
+        
+        @include padding($padding-1);
+        @include slide-color-r-to-l;
+        &:hover{
+            background-position: 100% 100%;
+            animation: slide-color-r-to-l 275ms ease;
+        }
+        &:last-child{
+            border-bottom: 1px solid #7c7c7c52;
+        }
+    }
+}

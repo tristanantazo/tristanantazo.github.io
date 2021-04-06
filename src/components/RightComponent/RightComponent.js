@@ -7,7 +7,7 @@ import ThirdStack from './Stacks/ThirdStack';
 import FourthStack from './Stacks/FourthStack';
 
 class RightContainer extends React.Component{
-    constructor(props){
+    constructor(){
         super();
         this.state = {
             name: "Hi I'm <br/> Tristan Viel Antazo",
@@ -35,21 +35,20 @@ class RightContainer extends React.Component{
                 this.ref.ThirdStack.current.ref.section.current,
                 this.ref.FourthStack.current.ref.section.current,
             ],
-            scrollY = window.scrollY || window.pageYOffset,
-            innerHeight = 0;
+            scrollY = window.scrollY || window.pageYOffset;
 
             this.firstStackAnimation(sections[0], scrollY);
-            // for (let index = 0; index < sections.length; index++) {
-            //     var element = sections[index],
-            //         offsetTop = element.offsetTop,
-            //         offsetHeight = element.offsetHeight + offsetTop;
+            for (let index = 0; index < sections.length; index++) {
+                var element = sections[index],
+                    offsetTop = element.offsetTop,
+                    offsetHeight = element.offsetHeight + offsetTop;
     
-            //    if(scrollY >= offsetTop && scrollY < offsetHeight){
-            //         element.classList.add('active')
-            //     }else{
-            //         element.classList.remove('active')
-            //     }   
-            // }     
+               if(scrollY >= offsetTop && scrollY < offsetHeight){
+                    element.classList.add('active')
+                }else{
+                    element.classList.remove('active')
+                }   
+            }     
             this.activateSectionEffect(scrollY, currentStack);
     }
     firstStackAnimation = (element, scrollY) => {

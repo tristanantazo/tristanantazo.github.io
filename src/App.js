@@ -4,9 +4,6 @@ import RightComponent from './components/RightComponent/RightComponent'
 
 import './css/App.scss';
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="App">
