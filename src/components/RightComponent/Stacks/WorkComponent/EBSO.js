@@ -1,17 +1,6 @@
 import React from "react";
 
 export default class EBSO extends React.Component {
-    // componentDidMount() {
-    //     console.log('EBSO componentDidMount')
-    //     var d_work = document.getElementsByClassName("detailed-work");
-    //     d_work[0].classList.add('open-active')
-    // }
-
-    // componentWillUnmount(){
-    //     var d_work = document.getElementsByClassName("detailed-work");
-    //     d_work[0].classList.remove('open-active')
-    // }
-
     render(){
         return (
             <div className="work">

@@ -8,7 +8,6 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 
 library.add(fab, fas, far);
 
-
 export default class FourthStack extends React.Component {
     constructor (props) {
         super(props)
