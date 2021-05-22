@@ -14,7 +14,6 @@
     color: var(--tertiary);
 
     .ImageLogo, .ImageLogo img{
-        height: 10em;
         width: 100%;
     }
     .soc-media{
@@ -32,5 +31,26 @@
     .copyrights{
         text-align: right;
         @include padding($padding-1);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .LeftNav { 
+        position: absolute;
+        left: -128px;
+        -webkit-box-shadow: 0 10px 6px -6px #777;
+        -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: -10px 4px 13px 0px #050708;
+        z-index: 1;
+        &.open-active {
+            animation: left-nav-slide-right 0.3s cubic-bezier(.49,0,.52,1);
+            left: 0px;
+            opacity: 1;
+            position: fixed;
+            box-shadow: 2px 4px 13px 0px #050708;
+        }
+        &.close-active {
+            animation: left-nav-slide-left 0.3s cubic-bezier(.49,0,.52,1);
+        }
     }
 }

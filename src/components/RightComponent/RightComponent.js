@@ -7,8 +7,8 @@ import ThirdStack from './Stacks/ThirdStack';
 import FourthStack from './Stacks/FourthStack';
 
 class RightContainer extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             name: "Hi I'm <br/> Tristan Viel Antazo",
         }
@@ -92,6 +92,7 @@ class RightContainer extends React.Component{
     render() {
         return (
             <div className="RightContainer" id="RightContainer">
+                <button className="slideToggle" onClick={()=>{this.props.toggleLeft()}}>OPEN MENU</button>
                 <FirstStack ref={this.ref.FirstStack}/>
                 <SecondStack ref={this.ref.SecondStack}/>
                 <ThirdStack ref={this.ref.ThirdStack}/>   

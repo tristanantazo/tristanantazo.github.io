@@ -8,7 +8,26 @@
         opacity: 1;
     }
 }
-
+@keyframes left-nav-slide-right { 
+    0%{
+        left: -128px;
+        opacity: 0;
+    }
+    100%{
+        left: 0px;
+        opacity: 1;
+    }
+}
+@keyframes left-nav-slide-left { 
+    100%{
+        left: -128px;
+        opacity: 0;
+    }
+    0%{
+        left: 0px;
+        opacity: 1;
+    }
+}
 @keyframes div-slide-up { 
     0%{
         top: 100px;
