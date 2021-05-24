@@ -370,6 +370,7 @@
             }
         }
         .abt-skills{
+            @include padding(6rem 0px);
             .about-container{
                 &__wrapper {
                     display: flex;
@@ -391,19 +392,23 @@
             }
         }
         .work-exp{
-            padding-top: 8em;
-            position: relative;
-            top: 100px;
-            opacity: 0;
+            padding-top: 5em;
             h1{
-                font-family: $font-bold;
                 font-size: clamp(2rem, 9vw, 4rem);
             }
             .work-container{
+                margin: 20px auto;
                 .list-option{
                     display: none;
                 }
+                .detailed-work{
+                    padding: 0px;
+                    width: 100%;
+                }
             }
+        }
+        .contact-us{
+            padding-top: 5em;
         }
     }
 }

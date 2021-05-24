@@ -61,7 +61,7 @@ export default class ThirdStack extends React.Component {
     }
 
     reportWindowSize = e => {
-        if(window.innerWidth === 768){
+        if(window.innerWidth <= 768){
             this.setState({
                 currentWork: 'mobile'
             })
@@ -75,6 +75,7 @@ export default class ThirdStack extends React.Component {
     componentDidMount() {
         this.ref.detailedWork.current.classList.add('open-active')
         window.addEventListener('resize', this.reportWindowSize);
+        this.reportWindowSize()
     }
 
     render(){
