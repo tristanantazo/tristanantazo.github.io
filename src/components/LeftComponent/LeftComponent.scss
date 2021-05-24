@@ -13,6 +13,10 @@
     background-color: var(--primary);
     color: var(--tertiary);
 
+    .closeNav{
+        display: none;
+    }
+
     .ImageLogo, .ImageLogo img{
         width: 100%;
     }
@@ -41,7 +45,7 @@
         -webkit-box-shadow: 0 10px 6px -6px #777;
         -moz-box-shadow: 0 10px 6px -6px #777;
         box-shadow: -10px 4px 13px 0px #050708;
-        z-index: 1;
+        z-index: 2;
         &.open-active {
             animation: left-nav-slide-right 0.3s cubic-bezier(.49,0,.52,1);
             left: 0px;
@@ -51,6 +55,15 @@
         }
         &.close-active {
             animation: left-nav-slide-left 0.3s cubic-bezier(.49,0,.52,1);
+        }
+        .closeNav {
+            border: none;
+            background: none;
+            text-align: right;
+            color: white;
+            display: block;
+            width: 100%;
+            margin: 10px 0px;
         }
     }
 }

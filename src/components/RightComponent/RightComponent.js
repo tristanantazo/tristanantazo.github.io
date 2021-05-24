@@ -6,6 +6,11 @@ import SecondStack from './Stacks/SecondStack';
 import ThirdStack from './Stacks/ThirdStack';
 import FourthStack from './Stacks/FourthStack';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBars, fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faBars, fas);
 class RightContainer extends React.Component{
     constructor(props){
         super(props);
@@ -92,9 +97,10 @@ class RightContainer extends React.Component{
     render() {
         return (
             <div className="RightContainer" id="RightContainer">
-                <button className="slideToggle" onClick={()=>{this.props.toggleLeft()}}>OPEN MENU</button>
-                <FirstStack ref={this.ref.FirstStack}/>
+                <button className="toggleNav" onClick={()=>{this.props.toggleLeft()}}><FontAwesomeIcon icon={faBars} /></button>
+                <FirstStack ref={this.ref.FirstStack} />
                 <SecondStack ref={this.ref.SecondStack}/>
+                
                 <ThirdStack ref={this.ref.ThirdStack}/>   
                 <FourthStack ref={this.ref.FourthStack}/>   
             </div>

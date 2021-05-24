@@ -3,13 +3,13 @@ import './LeftComponent.scss';
 import t from './../../assets/image/tristan-logo-black.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import Menu from './Menu/Menu';
 
-library.add(fab, fas, far);
+library.add(fab, fas, far, faArrowLeft);
 
 class LeftComponent extends React.Component{
     constructor(props){
@@ -36,9 +36,11 @@ class LeftComponent extends React.Component{
     render() {
         return (
             <div className="LeftNav" ref={this.ref.leftNav}>
-                <button className="slideToggle" onClick={()=>{this.props.toggleLeft()}}>CLOSE MENU</button>
-                <div className="ImageLogo" onClick={()=>{this.slideTo()}}>
-                    <img src={t} className="App-logo" alt="logo" />
+                <div>
+                    <button className="closeNav" onClick={()=>{this.props.toggleLeft()}}><FontAwesomeIcon icon={faArrowLeft} /></button>
+                    <div className="ImageLogo" onClick={()=>{this.slideTo()}}>
+                        <img src={t} className="App-logo" alt="logo" />
+                    </div>
                 </div>
                 <Menu/>
                 <div className="soc-media">

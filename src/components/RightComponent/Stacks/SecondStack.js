@@ -23,10 +23,9 @@ class SecondStack extends React.Component {
         return (
             <div className="sections second-stack" ref={this.ref.section}>
                 <div className="abt-skills" ref={this.ref.aboutSkill}>
-                    <div className="about">
-                        {/* <h1 className="">ABOUT</h1> */}
-                        <div className="d-flex">
-                            <div className="img-wrapper columns">
+                    <div className="about-container">
+                        <div className="about-container__wrapper">
+                            <div className="img-wrapper">
                                 <div className="hexa">
                                     <div className="hex1">
                                         <div className="hex2">
@@ -36,9 +35,8 @@ class SecondStack extends React.Component {
                                     </div>
                                 </div>
                             </div>                            
-                            <div className="abt columns">
-                                <h2>ABOUT ME</h2>
-                                <p>A Junior Web Developer specializing in full-stack development. Experience two and 
+                            <div className="abt">
+                                <p> WHO AM I?... A Junior Web Developer specializing in full-stack development. Experience two and 
                                     a half years in different web development, knowledge in different web programming 
                                     languages and frameworks. Driven and self-motivated, and therefore effective at 
                                     completing tasks with minimal supervision.</p>                                
