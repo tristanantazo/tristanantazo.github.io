@@ -12,11 +12,9 @@ class App extends React.Component {
   }
 
   toggleLeft=()=>{
-    this.setState(prev=> {
-      return {
-        leftTogle: prev.leftTogle? false: true
-      }
-    })
+    this.setState((prev)=> (
+      {leftTogle: prev.leftTogle? false: true}
+    ))
   }
 
   render() {

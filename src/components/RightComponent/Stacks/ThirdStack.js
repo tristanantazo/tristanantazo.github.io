@@ -30,6 +30,14 @@ export default class ThirdStack extends React.Component {
     RenderWork = () => {
         if(this.state.currentWork === 'FPZ'){
             return <FPZ/>;
+        }else if(this.state.currentWork === 'mobile') {
+            return (
+                // react fragments shortcuts <React.Fragments> <>
+                <>  
+                    <FPZ/>
+                    <EBSO/>
+                </>
+            );
         }else{
             return <EBSO/>;
         }
@@ -52,8 +60,21 @@ export default class ThirdStack extends React.Component {
         this.ref.detailedWork.current.classList.add('open-active')       
     }
 
+    reportWindowSize = e => {
+        if(window.innerWidth === 768){
+            this.setState({
+                currentWork: 'mobile'
+            })
+        }else{
+            this.setState({
+                currentWork: 'FPZ'
+            })
+        }
+    }
+
     componentDidMount() {
         this.ref.detailedWork.current.classList.add('open-active')
+        window.addEventListener('resize', this.reportWindowSize);
     }
 
     render(){

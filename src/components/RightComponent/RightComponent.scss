@@ -29,19 +29,19 @@
                 opacity: 1;
             }
         }
-        &:nth-child(1){
+        &:nth-child(2){
             background-image: url(./../../assets/image/code-1076536_1920.jpg);
         }
-        &:nth-child(2){
+        &:nth-child(3){
             background-color: var(--secondary-light);
         }
-        &:nth-child(3){
+        &:nth-child(4){
             background-color: var(--secondary);
         }
-        &:nth-child(4){
+        &:nth-child(5){
             background-color: var(--primary);
         }
-        &:nth-child(5){
+        &:nth-child(6){
             background-color: white;
         }
     }
@@ -59,7 +59,7 @@
         .text-box{
             width: 100%;
             position: relative;
-            top: 32vh;
+            top: 23vh;
             margin: 0 auto;
             .greetings {
                 margin-bottom: 0;
@@ -102,10 +102,11 @@
     .abt-skills{
         display: flex;
         flex-direction: column;
-        @include padding-vertical(4em);
+        @include padding(12rem 0px);
         .about-container{
-            @include margin-vertical($padding-4);
-            font-size: clamp(1rem, 1.5vw, 9rem);
+            @include margin-vertical($padding-1);
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            text-align: justify;
             &__wrapper {
                 display: flex;
                 flex-wrap: wrap;
@@ -143,17 +144,20 @@
                         width: 300px;
                     }
                 }
+                .abt {
+                    margin-bottom: 30px;
+                }
             }
         }
         .skill{
             h2{
                 font-family: $font-bold;
-                @include margin-vertical(1em)
             }
             .skill-container{
                 justify-content: space-between;
                 display: flex;
                 flex-wrap: wrap;
+                @include margin-vertical(1em);
                 .skill-wrapper{
                     img{
                         width: 100px;
@@ -162,7 +166,7 @@
                     }
                     p{
                         letter-spacing: 2px;
-                        font-size: clamp(1rem, 1.5vw, 9rem);
+                        font-size: clamp(1rem, 1.5vw, 1.5rem);
                         text-align: center;
                         @include margin-vertical(15px)
                     }
@@ -180,7 +184,7 @@
         opacity: 0;
         h1{
             font-family: $font-bold;
-            font-size: 5em;
+            font-size: clamp(2rem, 9vw, 4rem);
         }
         .work-container{
             width: 90%;
@@ -188,7 +192,7 @@
             @include margin-horizontal(auto);
             @include margin-vertical(3.5em);
             min-height: 50vh;
-            font-size: 1.4em;
+            // font-size: 1.4em;
             letter-spacing: 1px;
             .list-option{
                 position: relative;
@@ -264,14 +268,12 @@
     }
     .contact-us{
         color: white;
-        display: flex;
         padding-top: 8em;
         position: relative;
         top: 100px;
         opacity: 0;
-        .left-side, .right-side{
-            width: 50%;
-        }
+        display: flex;
+        flex-wrap: wrap;
         &:after{
             clear: both;
             content: "";
@@ -342,7 +344,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .RightContainer { 
         position: absolute;
         padding-left: 0;
@@ -358,10 +360,49 @@
         }
         .greet-zone{
             text-align: center;
+            .text-box{
+                top:40vh;
+            }
         }
         .sections {
             .greet-zone, .abt-skills, .work-exp, .contact-us{
                 @include padding-horizontal($padding-2);
+            }
+        }
+        .abt-skills{
+            .about-container{
+                &__wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    .abt, .img-wrapper{
+                        flex: 1;
+                    }
+                    .img-wrapper {
+                        .hexa {
+                            width: 250px;
+                            height: 155px;
+                        }
+                        img{
+                            height: 100%;
+                            width: 73%;
+                        }
+                    }
+                }
+            }
+        }
+        .work-exp{
+            padding-top: 8em;
+            position: relative;
+            top: 100px;
+            opacity: 0;
+            h1{
+                font-family: $font-bold;
+                font-size: clamp(2rem, 9vw, 4rem);
+            }
+            .work-container{
+                .list-option{
+                    display: none;
+                }
             }
         }
     }
