@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.995c2371.chunk.css",
-    "main.js": "/static/js/main.00f0753e.chunk.js",
-    "main.js.map": "/static/js/main.00f0753e.chunk.js.map",
+    "main.css": "/static/css/main.bb729e96.chunk.css",
+    "main.js": "/static/js/main.c7c3529d.chunk.js",
+    "main.js.map": "/static/js/main.c7c3529d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2eec4c54.js",
     "runtime-main.js.map": "/static/js/runtime-main.2eec4c54.js.map",
     "static/js/2.5fa02db0.chunk.js": "/static/js/2.5fa02db0.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ee7c8142.chunk.js": "/static/js/3.ee7c8142.chunk.js",
     "static/js/3.ee7c8142.chunk.js.map": "/static/js/3.ee7c8142.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.995c2371.chunk.css.map": "/static/css/main.995c2371.chunk.css.map",
+    "static/css/main.bb729e96.chunk.css.map": "/static/css/main.bb729e96.chunk.css.map",
     "static/js/2.5fa02db0.chunk.js.LICENSE.txt": "/static/js/2.5fa02db0.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/static/media/Titillium-RegularUpright.ce3517ca.otf",
     "static/media/RightComponent.scss": "/static/media/code-1076536_1920.f8147254.jpg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.2eec4c54.js",
     "static/js/2.5fa02db0.chunk.js",
-    "static/css/main.995c2371.chunk.css",
-    "static/js/main.00f0753e.chunk.js"
+    "static/css/main.bb729e96.chunk.css",
+    "static/js/main.c7c3529d.chunk.js"
   ]
 }
