@@ -64,9 +64,9 @@ class RightContainer extends React.Component{
             move = 0,
             oo = 1;
 
-            if(scrollY > container.offsetTop && move > -30 && move > -70){
-                move = container.offsetTop - scrollY
-                oo = ((container.scrollHeight - scrollY) / container.scrollHeight) + 0.5
+            if(scrollY > (container.offsetTop - 100) && move > -30 && move > -70){
+                move = (container.offsetTop - 100) - scrollY
+                oo = ((200 - scrollY) / container.scrollHeight) + 0.5
             }
             container.style.opacity = oo
             this.setTransform(greet, `translateX(${move}px)`)

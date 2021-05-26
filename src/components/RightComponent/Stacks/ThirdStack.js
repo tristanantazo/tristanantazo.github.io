@@ -56,7 +56,6 @@ export default class ThirdStack extends React.Component {
 
         var c_y = index * e_target.scrollHeight;
         this.ref.movingLine.current.style.transform = 'translateY('+c_y+'px)';
-
         this.ref.detailedWork.current.classList.add('open-active')       
     }
 
